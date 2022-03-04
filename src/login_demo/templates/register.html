@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block nav %}{% endblock %}
+
+{% block content %}
+<h1>Register account</h1>
+
+<form method="POST" action="">
+    {{ form.csrf_token }}
+    {{ form.email.label }} {{ form.email(size=20) }}<br/>
+    {{ form.password.label }} {{ form.password(size=20) }}<br/>
+    {{ form.password2.label }} {{ form.password2(size=20) }}<br/>
+    {{ form.register() }}
+</form>
+
+{% endblock %}
